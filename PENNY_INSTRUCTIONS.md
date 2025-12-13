@@ -1,27 +1,31 @@
-# Midnight Kitties - Compilation Instructions for Penny
+# Midnight Kitties - Compilation Instructions for Penny (WSL)
 
 Hey Penny! John needs you to compile the Compact smart contract on your machine since Chuck's Haswell CPU is too old for the zkir component.
 
+**All commands below are run in WSL (Ubuntu).**
+
 ## File Structure John Wants
 
-```
-C:\Users\John\utils_Midnight\
-└── midnight-kitties_folder\
-    └── (this repo)
-```
-
-In WSL, this maps to:
+WSL path (use this):
 ```
 /mnt/c/Users/John/utils_Midnight/midnight-kitties_folder/
 ```
 
-## Prerequisites
+Windows equivalent:
+```
+C:\Users\John\utils_Midnight\midnight-kitties_folder\
+```
 
-1. **Node.js 18+** - Check with `node --version`
-2. **Yarn** - Install with `npm install -g yarn` if needed
-3. **Compact compiler** - See installation below
+## Prerequisites (in WSL)
 
-## Step 1: Clone the Repo
+1. **WSL2 with Ubuntu** - Open Windows Terminal → Ubuntu
+2. **Node.js 18+** - Check with `node --version`
+   - If missing: `curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - && sudo apt-get install -y nodejs`
+3. **Yarn** - Install with `npm install -g yarn` if needed
+4. **Build tools** - `sudo apt-get install -y build-essential`
+5. **Compact compiler** - See Step 3 below
+
+## Step 1: Clone the Repo (in WSL terminal)
 
 ```bash
 mkdir -p /mnt/c/Users/John/utils_Midnight
